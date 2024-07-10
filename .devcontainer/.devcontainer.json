@@ -1,0 +1,17 @@
+{
+    "name": "PHP & MySQL",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "web",
+    "workspaceFolder": "/var/www/html",
+    "extensions": [
+      "felixfbecker.php-debug",
+      "bmewburn.vscode-intelephense-client",
+      "neilbrayfield.php-docblocker"
+    ],
+    
+    "settings": {
+    "php.validate.executablePath": "/usr/local/bin/php"
+  },
+  "forwardPorts": [80, 8080, 3306],
+  "postCreateCommand": "docker-php-ext-install mysqli"
+}
